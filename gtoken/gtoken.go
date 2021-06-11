@@ -220,7 +220,7 @@ func (m *GfToken) Start() bool {
 	}
 
 	// 注册
-	if m.RegisterPath != "" && m.RegisterAfterFunc != nil && m.RegisterBeforeFunc == nil {
+	if m.RegisterPath != "" && m.RegisterAfterFunc != nil && m.RegisterBeforeFunc != nil {
 		s.BindHandler(m.RegisterPath, m.Register)
 	}
 
